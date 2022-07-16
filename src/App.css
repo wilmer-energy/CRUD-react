@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.list {
+  background: linear-gradient(180deg, #e9c46a, #e76f51);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  gap: 20px;
+
+}
+
+.card {
+  width: 80%;
+
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+.card ul {
+  list-style: none;
+  width: 60%;
+  margin-left: 10%;
+}
+
+.card ul>li {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.deleteEdit>button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: #e76f51;
+  margin-left: 10px;
+  border: none;
+}
+
+.deleteEdit>button:hover {
+  border: 1px solid #e76f51;
+  cursor: pointer;
+  background-color: white;
+  color: #e76f51;
+}
+
+.form {
+  height: 100%;
+  width: 45%;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+}
+
+.form label {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #e76f51;
+}
+
+.form button {
+
+  width: 20%;
+  margin-left: calc((100%-20%)/2);
+  height: 40px;
+
+  border-radius: 5px;
+  color: white;
+  background-color: #e76f51;
+  border: none;
+}
+
+.form button:hover {
+  border: 1px solid #e76f51;
+  cursor: pointer;
+  background-color: white;
+  color: #e76f51;
+}
