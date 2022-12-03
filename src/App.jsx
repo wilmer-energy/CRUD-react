@@ -13,17 +13,24 @@ function App() {
   const [itemSelected,setItemSelected]=useState(null)
 
   useEffect(() => {
-    axios.get("https://users-crud1.herokuapp.com/users/")
+    axios.get("http://localhost:4000/api/v1/users")
       .then((res) => {
-        setUsers(res.data)
+        setUsers(res.data.data.users)
+        console.log(res.data.data.users);
       })
+      .catch(function(error) {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+      });
   }, [])
 
   const refresh =function(){
-    axios.get("https://users-crud1.herokuapp.com/users/")
+    axios.get("http://localhost:4000/api/v1/users")
       .then((res) => {
-      setUsers(res.data)
+      setUsers(res.data.data.users)
       })
+      .catch(function(error) {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+      });
   }
   const update = function (itemForUpdate) {
     setItemSelected(itemForUpdate)
